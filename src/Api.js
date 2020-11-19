@@ -10,24 +10,6 @@ class App extends Component {
     }
 
 
-
-
-    handleChange2 = event => {
-        const { name, value } = event.target;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    submitForm2 = event => {
-        event.preventDefault();
-
-        this.props.handleSubmit(this.state);
-        this.setState(this.initialState);
-    }
-
-
     // Code is invoked after the component is mounted/inserted into the DOM tree.
     componentDidMount() {
         const url =
@@ -44,25 +26,6 @@ class App extends Component {
                 console.log(err);
             })
     }
-
-    handleChange = event => {
-        const { name, value } = event.target;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    submitForm = event => {
-        event.preventDefault();
-
-        this.props.handleSubmit(this.state);
-        this.setState(this.initialState);
-    }
-
-
-
-
 
     render() {
         const { data } = this.state
