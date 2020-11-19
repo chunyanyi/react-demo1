@@ -73,6 +73,23 @@ class App extends Component {
 
         return <ul>{result}</ul>
     }
+
+
+    handleChange3 = event => {
+        const { name, value } = event.target;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    submitForm3 = event => {
+        event.preventDefault();
+
+        this.props.handleSubmit(this.state);
+        this.setState(this.initialState);
+    }
+
 }
 
 export default App
